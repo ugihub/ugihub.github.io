@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-site-verification" content="SB_bzIxg6BZ4E1T_PpbTX4w42J0Fq9YTzF9dCjiJRW8" />
+    <title>Ugi Sugiman Portofolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="Assets/images/logo.png">
+</head>
+
+<body>
+    <!-- Floating Navbar -->
+    <header>
+        <div class="logo">Ugi Sugiman R</div>
+        <nav id="navbar">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="Assets/CV/CV UGI.pdf" download class="cv-link">CV</a>
+        </nav>
+        <div class="burger" id="burger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-image">
+            <div class="photo-container">
+                <div class="photo">
+                    <img src="Assets/images/me.jpg" alt="Hero Image">
+                </div>
+            </div>
+        </div>
+        <div class="hero-content">
+            <h1>Welcome to My Portfolio</h1>
+            <p id="typing-text"></p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about fade-in">
+        <div class="about-content">
+            <h2>About Me</h2>
+            <p>
+                I am a first-semester student at the University of Logistics and International Business , where I am
+                gaining foundational knowledge in global trade, supply chain management, and business strategies.
+                Alongside my studies, I have discovered a keen interest in programming, which has become a exciting new
+                journey for me. As a beginner programmer, I enjoy exploring various coding languages and tools to
+                develop practical solutions, blending my academic focus on logistics with my growing technical
+                expertise.
+            </p>
+        </div>
+        <div>
+            <h2>My Skills</h2>
+            <div class="skills">
+                <div class="skill-card" data-description="Expertise in semantic and responsive HTML5.">
+                    <h3>HTML</h3>
+                    <p class="description hidden">Expertise in semantic and responsive HTML5.</p>
+                </div>
+                <div class="skill-card"
+                    data-description="Proficient in CSS3, animations, and frameworks like TailwindCSS.">
+                    <h3>CSS</h3>
+                    <p class="description hidden">Proficient in CSS3, animations, and frameworks like TailwindCSS.</p>
+                </div>
+                <div class="skill-card" data-description="Strong knowledge of ES6+ and DOM manipulation.">
+                    <h3>JavaScript</h3>
+                    <p class="description hidden">Strong knowledge of ES6+ and DOM manipulation.</p>
+                </div>
+                <div class="skill-card" data-description="Experience building dynamic web apps with React.">
+                    <h3>PHP</h3>
+                    <p class="description hidden">Experience building dynamic web apps with CI4/Laravel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects fade-in">
+        <h2 class="project-title">My Projects</h2>
+        <div class="project-grid">
+            <a href="https://github.com/ugihub/uipiece" class="project-card glow-card" target="_blank">
+                <img src="Assets/images/uipiece.png" alt="Project 1">
+                <h3>Project 1</h3>
+                <p>A responsive website built with HTML, CSS, and PHP.</p>
+            </a>
+            <a href="https://github.com/ugihub/InfinitySnake" class="project-card glow-card" target="_blank">
+                <img src="Assets/images/snake.png" alt="Project 2">
+                <h3>Project 2</h3>
+                <p>InfinitySnake game build in Greenfoot.</p>
+            </a>
+            <a href="https://github.com/ugihub/portofolioAI" class="project-card glow-card" target="_blank">
+                <img src="Assets/images/portofolio.png" alt="Project 3">
+                <h3>Project 3</h3>
+                <p>A responsive website built with HTML, CSS, and JavaScript.</p>
+            </a>
+            <a href="https://github.com/ugihub/financeWeb" class="project-card glow-card" target="_blank">
+                <img src="Assets/images/finance.png" alt="Project 4">
+                <h3>Project 4</h3>
+                <p>This website was created to record finances and save for items you want to buy.</p>
+            </a>
+            <a href="https://github.com/ugihub/MazeGameAlice3" class="project-card glow-card" target="_blank">
+                <img src="Assets/images/Maze.png" alt="Project 5">
+                <h3>Project 5</h3>
+                <p>This Game Build with Alice3.</p>
+            </a>
+            <a href="https://github.com/ugihub/ToDoApp" class="project-card glow-card" target="_blank">
+                <img src="Assets/images/ToDoApp.png" alt="Project 6">
+                <h3>Project 6</h3>
+                <p>This website was created to record your Activities.</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- CV -->
+    <section id="download-cv" class="fade-in">
+        <div class="cv-container">
+            <!-- Left Column: Large Text -->
+            <div class="cv-large-text-left">
+                <span>MY</span>
+            </div>
+
+            <!-- Middle Column: Card -->
+            <div class="cv-card">
+                <h2>Curriculum Vitae</h2>
+                <p>
+                    If you'd like to know more about my skills, education, and experience, feel free to download my CV.
+                </p>
+                <a href="Assets/CV/CV UGI.pdf" download class="cta-button">Download CV</a>
+            </div>
+
+            <!-- Right Column: Large Text -->
+            <div class="cv-large-text-right">
+                <span>CV</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact fade-in">
+        <h2>Contact Me</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="contact-button">Send Message</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-icons">
+            <a href="https://github.com/ugihub" target="_blank" title="GitHub">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                    </path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ugisugimanr/" target="_blank" title="LinkedIn">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/ugisr_/" target="_blank" title="Instagram">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+            </a>
+        </div>
+        <p>&copy; 2025 Ugi Sugiman R. All rights reserved.</p>
+    </footer>
+
+    <!-- Go to Hero Button -->
+    <button class="go-to-hero" onclick="scrollToHero()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 15l-6-6-6 6"></path>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/gh/domyid/tracker@1.0.2/index.js"></script>
+</body>
+
+</html>
