@@ -160,31 +160,43 @@ function scrollToHero() {
   });
 }
 
+// Newsletter form handler
 document.addEventListener("DOMContentLoaded", () => {
   const form = document.getElementById("contact-form");
+  if (!form) return;
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault(); // Mencegah pengiriman formulir standar
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
 
-    // Ambil nilai dari input
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
+    const name = this.querySelector("input[name='user_name']").value.trim();
+    const email = this.querySelector("input[name='user_email']").value.trim();
+    const message = this.querySelector("textarea[name='user_message']").value.trim();
+    const button = this.querySelector("button[type='submit']");
 
-    // Buat subjek dan isi email
-    const subject = encodeURIComponent(`Message from ${name}`);
-    const body = encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    );
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
 
-    // Buat tautan mailto
-    const mailtoLink = `mailto:ugisugiman6@gmail.com?subject=${subject}&body=${body}`;
+    button.disabled = true;
+    button.textContent = "Sending...";
 
-    // Buka aplikasi email default
-    window.location.href = mailtoLink;
-
-    // Kosongkan formulir setelah dikirim (opsional)
-    form.reset();
+    emailjs.send("service_vm9k7tv", "template_n9mxg0j", {
+      name: name,
+      email: email,
+      message: message
+    }).then(() => {
+      alert("Thank you for reaching out! We'll be in touch.");
+      form.reset();
+      button.disabled = false;
+      button.textContent = "Join Us";
+    }).catch((error) => {
+      alert("Failed to send your message. Please try again.");
+      console.error("EmailJS Error:", error);
+      button.disabled = false;
+      button.textContent = "Join Us";
+    });
   });
 });
 
