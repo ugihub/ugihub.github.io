@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", () => {
     button.disabled = true;
     button.textContent = "Sending...";
 
-    emailjs.send("service_vm9k7tv", "template_n9mxg0j", {
+    emailjs.send("service_vm9k7tv", "template_cfyh1ps", {
       name: name,
       email: email,
       message: message
